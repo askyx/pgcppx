@@ -1,0 +1,53 @@
+---
+Checks:     '
+            bugprone-*,
+            clang-analyzer-*,
+            clang-diagnostic-*,
+            google-*,
+            modernize-*,
+            performance-*,
+            portability-*,
+            readability-*,
+            -bugprone-exception-escape,
+            -bugprone-macro-parentheses,
+            -bugprone-too-small-loop-variable,
+            -bugprone-easily-swappable-parameters,
+            -clang-analyzer-cplusplus.NewDelete,
+            -clang-analyzer-cplusplus.NewDeleteLeaks,
+            -google-readability-braces-around-statements,
+            -google-readability-casting,
+            -google-readability-todo,
+            -modernize-use-nodiscard,
+            -modernize-avoid-c-arrays,
+            -modernize-use-trailing-return-type,
+            -modernize-macro-to-enum,
+            -readability-braces-around-statements,
+            -readability-isolate-declaration,
+            -readability-magic-numbers,
+            -readability-uppercase-literal-suffix,
+            -readability-convert-member-functions-to-static,
+            -readability-function-cognitive-complexity,
+            -readability-identifier-length,
+            -readability-use-anyofallof,
+            -portability-simd-intrinsics,
+            -performance-enum-size,
+            '
+CheckOptions:
+  - { key: readability-identifier-naming.ClassCase,           value: CamelCase  }
+  - { key: readability-identifier-naming.EnumCase,            value: CamelCase  }
+  - { key: readability-identifier-naming.FunctionCase,        value: CamelCase  }
+  - { key: readability-identifier-naming.ParameterCase,       value: lower_case  }
+  - { key: readability-identifier-naming.GlobalConstantCase,  value: UPPER_CASE }
+  - { key: readability-identifier-naming.MemberCase,          value: lower_case }
+  - { key: readability-identifier-naming.MemberSuffix,        value: _          }
+  - { key: readability-identifier-naming.NamespaceCase,       value: lower_case }
+  - { key: readability-identifier-naming.StructCase,          value: CamelCase  }
+  - { key: readability-identifier-naming.UnionCase,           value: CamelCase  }
+  - { key: readability-identifier-naming.VariableCase,        value: lower_case }
+WarningsAsErrors: '*'
+# HeaderFilterRegex: 'src/include'
+HeaderFilterRegex: '^.*/src/.*(h|hpp)$'
+
+
+# -readability-use-anyofallof
+#     error: replace loop by 'std::ranges::any_of()'

@@ -1,0 +1,6 @@
+select test_add(1, 2);
+ test_add 
+----------
+        5
+(1 row)
+

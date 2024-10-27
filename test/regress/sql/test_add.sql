@@ -1,0 +1,1 @@
+select test_add(1, 2);

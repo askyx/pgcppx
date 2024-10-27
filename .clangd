@@ -1,0 +1,18 @@
+
+# for vscode settings.json
+    # "clangd.arguments": [
+    #     "-j=16",
+    #     "--background-index",
+    #     "--compile-commands-dir=build/Debug",
+    #     "--pretty",
+    #     "--clang-tidy",
+    #     "--all-scopes-completion",
+    #     "--completion-style=detailed",
+    #     "--function-arg-placeholders",
+    #     "--header-insertion=iwyu",
+    #     "--pch-storage=disk",
+    # ]
+
+# for gcc compiler
+CompileFlags:
+  Remove: [-fmodules-ts, -fmodule-mapper*, -fdeps-format=p1689r5]
